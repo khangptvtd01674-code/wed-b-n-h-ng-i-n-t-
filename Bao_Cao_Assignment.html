@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<style>
+    body { font-family: 'Times New Roman', Times, serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; }
+    h1 { text-align: center; font-size: 24px; text-transform: uppercase; }
+    h2 { font-size: 18px; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 5px; margin-top: 30px;}
+    h3 { font-size: 16px; margin-top: 20px;}
+    table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+    th, td { border: 1px solid #000; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; text-align: center;}
+    .placeholder { color: red; font-style: italic; text-align: center; border: 1px dashed red; padding: 20px; margin: 10px 0; background: #fff9f9;}
+    pre { background: #f4f4f4; padding: 10px; border: 1px solid #ddd; overflow-x: auto; font-family: Consolas, monospace; font-size: 13px;}
+</style>
+</head>
+<body>
+
+    <h1>Báo cáo Assignment Môn Lập Trình Cơ Sở Với JavaScript</h1>
+    <p><strong>Tên dự án:</strong> Website Bán Phụ Kiện Công Nghệ TECHZONE</p>
+    <p><strong>Sinh viên thực hiện:</strong> [Điền tên của bạn]</p>
+    <p><strong>Mã sinh viên:</strong> [Điền mã sinh viên]</p>
+    <p><strong>Link GitHub Pages:</strong> [Điền link website của bạn]</p>
+
+    <h2>I. GIỚI THIỆU DỰ ÁN</h2>
+    <p>TECHZONE là một website thương mại điện tử chuyên bán các sản phẩm phụ kiện công nghệ như chuột, bàn phím, tai nghe, cáp sạc,... Dự án được xây dựng với giao diện hiện đại (UI/UX) và áp dụng triệt để JavaScript (Vanilla JS) để xử lý logic phía Front-end, bao gồm quản lý giỏ hàng, xác thực người dùng, và hệ thống quản trị (Admin Dashboard).</p>
+
+    <h3>Sơ đồ Ca Sử Dụng Tổng Thể (Use Case Diagram):</h3>
+    <div style="text-align: center; margin: 15px 0;">
+        <img src="images/use_case_diagram.svg" alt="Sơ đồ Use Case TECHZONE" style="max-width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <p style="font-size: 13px; color: #555; margin-top: 8px;"><em>Hình 1: Sơ đồ Use Case Diagram chuẩn UML của hệ thống TECHZONE (<a href="use_case_diagram.html" target="_blank" style="color: #0284c7; font-weight: bold;">Xem bản lớn &amp; Tải ảnh PNG</a> &bull; <a href="Dac_Ta_Use_Case.html" target="_blank" style="color: #0284c7; font-weight: bold;">Xem tài liệu Đặc Tả Use Case chi tiết</a>)</em></p>
+    </div>
+
+    <h2>II. KẾT QUẢ ĐÁP ỨNG YÊU CẦU ĐỀ BÀI (Y/C)</h2>
+    <table>
+        <tr>
+            <th width="5%">STT</th>
+            <th width="35%">Yêu cầu trong Assignment</th>
+            <th width="45%">Kết quả ứng dụng JS vào Website</th>
+            <th width="15%">File thực hiện</th>
+        </tr>
+        <tr>
+            <td align="center">1</td>
+            <td><strong>2.2. Trang danh mục sản phẩm</strong></td>
+            <td>Sử dụng mảng đối tượng JS và hàm <code>filter()</code> để phân loại sản phẩm.</td>
+            <td>data.js, products.js</td>
+        </tr>
+        <tr>
+            <td align="center">2</td>
+            <td><strong>2.3. Hiệu ứng sản phẩm</strong></td>
+            <td>Kết hợp CSS transform và sự kiện hover để zoom ảnh sản phẩm.</td>
+            <td>style.css</td>
+        </tr>
+        <tr>
+            <td align="center">3</td>
+            <td><strong>3. Slider/Banner</strong></td>
+            <td>Viết hàm <code>setInterval</code> để auto-slide, sử dụng click <code>nextSlide()</code> thao tác DOM.</td>
+            <td>slider.js</td>
+        </tr>
+        <tr>
+            <td align="center">4</td>
+            <td><strong>4. Form & kiểm tra dữ liệu</strong></td>
+            <td>Sử dụng JS thuần (Regex) để kiểm tra email hợp lệ, kiểm tra rỗng, độ dài password.</td>
+            <td>auth.js</td>
+        </tr>
+        <tr>
+            <td align="center">5</td>
+            <td><strong>5. Giỏ hàng & lưu trữ</strong></td>
+            <td>Toàn bộ dữ liệu giỏ hàng được lưu vào <code>localStorage</code>. Cập nhật số lượng realtime.</td>
+            <td>cart.js</td>
+        </tr>
+        <tr>
+            <td align="center">6</td>
+            <td><strong>6. Chức năng nâng cao</strong></td>
+            <td>Sử dụng <code>setInterval</code> để đếm ngược thời gian Flash Sale và render ra màn hình.</td>
+            <td>slider.js</td>
+        </tr>
+        <tr>
+            <td align="center">7</td>
+            <td><strong>7. Yêu cầu tự đề xuất</strong></td>
+            <td>Phân quyền Admin/User, Khách theo dõi đơn hàng, Admin CRUD Sản phẩm & Đơn hàng.</td>
+            <td>admin.js, auth.js</td>
+        </tr>
+    </table>
+
+    <h2>III. CÁC ỨNG DỤNG JS ĐÃ ÁP DỤNG & GIẢI THÍCH CODE</h2>
+
+    <h3>1. Slider / Banner có nút điều khiển (Yêu cầu 3)</h3>
+    <div class="placeholder">(BẠN HÃY XÓA KHUNG NÀY VÀ CHÈN ẢNH CHỤP BANNER TRANG CHỦ VÀO ĐÂY)</div>
+    <p><strong>Đoạn code xử lý (slider.js):</strong></p>
+<pre>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    if(index >= slides.length) currentSlide = 0;
+    if(index < 0) currentSlide = slides.length - 1;
+    slides[currentSlide].classList.add('active');
+}
+function nextSlide() { currentSlide++; showSlide(currentSlide); }
+setInterval(nextSlide, 5000);
+</pre>
+    <p><strong>Giải thích:</strong> Sử dụng <code>setInterval</code> gọi hàm <code>nextSlide</code> mỗi 5 giây để auto-play. Hàm <code>showSlide</code> sẽ thao tác DOM gỡ bỏ class <code>active</code> của ảnh cũ và thêm vào ảnh mới.</p>
+
+    <h3>2. Form & Kiểm tra dữ liệu đăng ký (Yêu cầu 4)</h3>
+    <div class="placeholder">(BẠN HÃY XÓA KHUNG NÀY VÀ CHÈN ẢNH CHỤP LỖI MÀU ĐỎ KHI ĐĂNG KÝ SAI VÀO ĐÂY)</div>
+    <p><strong>Đoạn code xử lý (auth.js):</strong></p>
+<pre>
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if(!emailRegex.test(email)) { 
+    document.getElementById('errRegEmail').style.display = 'block'; 
+    isValid = false; 
+}
+</pre>
+    <p><strong>Giải thích:</strong> Sử dụng Regular Expression để ép người dùng nhập đúng email. Nếu <code>.test(email)</code> là false, JS sẽ đổi <code>display</code> thành <code>block</code> để hiện chữ đỏ.</p>
+
+    <h3>3. Giỏ hàng & Local Storage (Yêu cầu 5)</h3>
+    <div class="placeholder">(BẠN HÃY XÓA KHUNG NÀY VÀ CHÈN ẢNH CHỤP TRANG GIỎ HÀNG VÀO ĐÂY)</div>
+    <p><strong>Đoạn code xử lý (cart.js):</strong></p>
+<pre>
+window.addToCart = (productId) => {
+    let cart = JSON.parse(localStorage.getItem('techzone_cart')) || [];
+    const existingItem = cart.find(item => item.productId === productId);
+    if (existingItem) existingItem.quantity += 1;
+    else cart.push({ productId: productId, quantity: 1 });
+    
+    localStorage.setItem('techzone_cart', JSON.stringify(cart));
+};
+</pre>
+    <p><strong>Giải thích:</strong> Dùng <code>localStorage.getItem</code> lấy dữ liệu giỏ. Dùng <code>.find()</code> kiểm tra trùng lặp, sau đó dùng <code>JSON.stringify</code> để lưu vĩnh viễn mảng vào trình duyệt.</p>
+
+    <h3>4. Đồng hồ đếm ngược (Yêu cầu 6)</h3>
+    <div class="placeholder">(BẠN HÃY XÓA KHUNG NÀY VÀ CHÈN ẢNH CHỤP ĐỒNG HỒ FLASH SALE VÀO ĐÂY)</div>
+    <p><strong>Đoạn code xử lý (slider.js):</strong></p>
+<pre>
+const countDownDate = new Date().getTime() + (24 * 60 * 60 * 1000);
+setInterval(function() {
+    const now = new Date().getTime();
+    const distance = countDownDate - now;
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    document.getElementById("flashHour").innerText = hours;
+}, 1000);
+</pre>
+    <p><strong>Giải thích:</strong> Lấy timestamp hiện tại, tính thời gian còn lại (distance) và dùng phép chia lấy dư <code>%</code> cùng <code>Math.floor</code> quy đổi ra Giờ/Phút/Giây.</p>
+
+    <h3>5. Quản lý Admin (Yêu cầu 7 Tự đề xuất)</h3>
+    <div class="placeholder">(BẠN HÃY XÓA KHUNG NÀY VÀ CHÈN ẢNH CHỤP TRANG DASHBOARD ADMIN VÀO ĐÂY)</div>
+    <p><strong>Đoạn code xử lý (admin.js):</strong></p>
+<pre>
+window.deleteUser = (email) => {
+    if (confirm("Xóa khách hàng này sẽ không thể khôi phục. Xóa?")) {
+        let users = JSON.parse(localStorage.getItem('techzone_users')) || [];
+        users = users.filter(u => u.email !== email);
+        localStorage.setItem('techzone_users', JSON.stringify(users));
+        loadAdminUsers();
+    }
+};
+</pre>
+    <p><strong>Giải thích:</strong> Hàm sử dụng <code>confirm</code> để xác nhận thao tác. Dùng cú pháp <code>filter()</code> của ES6 để loại bỏ tài khoản ra khỏi mảng mà không cần vòng lặp for, sau đó lưu lại vào LocalStorage.</p>
+
+</body>
+</html>
